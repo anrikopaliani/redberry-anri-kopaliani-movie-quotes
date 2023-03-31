@@ -20,4 +20,8 @@ Route::get('/', function () {
 	]);
 });
 
+Route::get('login', function () {
+	return view('login.login');
+});
+
 Route::post('login', [LoginController::class, 'store'])->middleware('guest');
