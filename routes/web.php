@@ -18,3 +18,7 @@ Route::get('/', function () {
 		'movie' => 'shawshank redemption quote',
 	]);
 });
+
+Route::get('login', function () {
+	return view('login.login');
+});
