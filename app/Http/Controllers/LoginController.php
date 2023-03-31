@@ -2,22 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreLoginRequest;
+
 class LoginController extends Controller
 {
-	public function store()
+	public function store(StoreLoginRequest $request)
 	{
-		// validate
-		$attributes = request()->validate([
-			'username' => 'required',
-			'password' => 'required',
-		]);
+		// retrieve data
+		$validated = $request->validate();
 
-		if (auth()->attempt($attributes))
-		{
-			return redirect('/');
-		}
-
-		// auth failed
-		return back();
+		return redirect('/');
 	}
 }
