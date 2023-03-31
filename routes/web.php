@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +19,5 @@ Route::get('/', function () {
 		'movie' => 'shawshank redemption quote',
 	]);
 });
+
+Route::post('login', [LoginController::class, 'store'])->middleware('guest');
