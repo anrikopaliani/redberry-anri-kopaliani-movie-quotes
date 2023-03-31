@@ -9,7 +9,7 @@ class LoginController extends Controller
 	public function store(StoreLoginRequest $request)
 	{
 		// retrieve data
-		$validated = $request->validate();
+		$validated = $request->validated();
 
 		return redirect('/');
 	}
