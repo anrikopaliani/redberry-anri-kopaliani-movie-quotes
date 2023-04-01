@@ -19,7 +19,9 @@
         <x-button>en</x-button>
         <x-button>ka</x-button>
     </div>
-    {{ $slot }}
+    <div class="flex flex-col">
+        {{ $slot }}
+    </div>
 </body>
 
 </html>

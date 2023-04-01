@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,5 @@ Route::get('/', function () {
 
 Route::get('login', [LoginController::class, 'index'])->middleware('guest');
 Route::post('login', [LoginController::class, 'store'])->middleware('guest');
+
+Route::get('movie-form', [MovieController::class, 'index'])->middleware('auth');
