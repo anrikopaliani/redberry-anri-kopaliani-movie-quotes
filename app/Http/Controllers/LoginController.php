@@ -24,4 +24,11 @@ class LoginController extends Controller
 		// if auth failed
 		return back();
 	}
+
+	public function destroy()
+	{
+		auth()->logout();
+
+		return redirect('/');
+	}
 }
