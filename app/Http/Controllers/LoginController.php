@@ -6,6 +6,11 @@ use App\Http\Requests\StoreLoginRequest;
 
 class LoginController extends Controller
 {
+	public function index()
+	{
+		return view('login.login');
+	}
+
 	public function store(StoreLoginRequest $request)
 	{
 		// retrieve data

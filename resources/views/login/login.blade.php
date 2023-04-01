@@ -1,5 +1,5 @@
 <x-layout>
-    <form action="#">
+    <form action="/login" method="POST">
         @csrf
         <x-input name="username" />
         <x-input name="password" type="password" />
