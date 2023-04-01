@@ -11,6 +11,12 @@ class LoginController extends Controller
 		// retrieve data
 		$validated = $request->validated();
 
-		return redirect('/');
+		if (auth()->attempt($validated))
+		{
+			return redirect('/');
+		}
+
+		// if auth failed
+		return back();
 	}
 }
