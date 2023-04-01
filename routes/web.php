@@ -25,3 +25,4 @@ Route::get('login', [LoginController::class, 'index'])->middleware('guest');
 Route::post('login', [LoginController::class, 'store'])->middleware('guest');
 
 Route::get('movie-form', [MovieController::class, 'index'])->middleware('auth');
+Route::post('movie-form', [MovieController::class, 'store'])->middleware('auth');
