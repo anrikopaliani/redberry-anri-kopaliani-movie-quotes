@@ -14,6 +14,7 @@ return new class extends Migration {
 			$table->id();
 			$table->string('quote');
 			$table->foreignId('movie_id')->references('id')->on('movies');
+			$table->foreignId('user_id')->references('id')->on('users');
 			$table->timestamps();
 		});
 	}
