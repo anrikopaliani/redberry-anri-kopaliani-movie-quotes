@@ -24,5 +24,5 @@ Route::get('/', function () {
 Route::get('login', [LoginController::class, 'index'])->middleware('guest');
 Route::post('login', [LoginController::class, 'store'])->middleware('guest');
 
-Route::get('movie-form', [MovieController::class, 'index'])->name('movie')->middleware('auth');
+Route::view('movie-form', 'add-movie-form.movie-form')->name('movie')->middleware('auth');
 Route::post('movie-form', [MovieController::class, 'store'])->name('movie')->middleware('auth');

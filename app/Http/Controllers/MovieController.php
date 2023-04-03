@@ -7,11 +7,6 @@ use App\Models\Movie;
 
 class MovieController extends Controller
 {
-	public function index()
-	{
-		return view('add-movie-form.movie-form');
-	}
-
 	public function store(StoreMovieRequest $request)
 	{
 		$validated = $request->validated();
