@@ -20,7 +20,7 @@
         <x-button>ka</x-button>
     </div>
     @guest
-        @if (!request()->routeIs('login'))
+        @if (Route::currentRouteName() !== 'login')
             <div class="absolute right-2 top-2 text-white">
                 <a href="/login">LOG IN</a>
             </div>
