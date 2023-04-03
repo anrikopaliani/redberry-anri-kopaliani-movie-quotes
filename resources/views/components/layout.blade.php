@@ -26,7 +26,14 @@
             </div>
         @endif
     @endguest
-    {{ $slot }}
+    @auth
+        <div class="absolute right-2 top-2">
+            <x-logout-button />
+        </div>
+    @endauth
+        <div class="flex flex-col">
+        {{ $slot }}
+    </div>
 </body>
 
 </html>
