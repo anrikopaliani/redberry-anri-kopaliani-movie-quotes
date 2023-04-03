@@ -1,7 +1,7 @@
 <x-layout>
     <h1 class="text-center text-6xl mb-6">Add A Quote</h1>
 
-    <form action="{{ route('add-quote') }}" method="POST" enctype="multipart/form-data">
+    <form action="/add-quote" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="flex flex-col space-y-2 mb-4">
             <label for="movie_id">Select a movie</label>
@@ -17,7 +17,7 @@
         </div>
         <div class="flex flex-col space-y-2 w-96 mb-4">
             <label for="quote_ka">Quote [ka]</label>
-            <input type="text" class="border rounded-md h-10 text-black" id="quote_en" name="quote_en">
+            <input type="text" class="border rounded-md h-10 text-black" id="quote_ka" name="quote_ka">
         </div>
 
         <div class="flex flex-col space-y-2 mb-4">
