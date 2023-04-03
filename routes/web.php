@@ -20,5 +20,5 @@ Route::get('/', function () {
 	]);
 });
 
-Route::get('login', [LoginController::class, 'index'])->middleware('guest');
-Route::post('login', [LoginController::class, 'store'])->middleware('guest');
+Route::get('login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('login', [LoginController::class, 'store'])->name('login')->middleware('guest');
