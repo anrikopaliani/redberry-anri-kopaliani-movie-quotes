@@ -19,9 +19,16 @@
         <x-button>en</x-button>
         <x-button>ka</x-button>
     </div>
+    @auth
+        <div class="absolute right-2 top-2">
+            <x-logout-button />
+        </div>
+    @endauth
+    
     <div class="flex flex-col">
         {{ $slot }}
     </div>
+
 </body>
 
 </html>

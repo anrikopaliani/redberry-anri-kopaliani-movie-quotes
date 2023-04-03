@@ -21,8 +21,11 @@ Route::get('/', function () {
 	]);
 });
 
-Route::get('login', [LoginController::class, 'index'])->middleware('guest');
-Route::post('login', [LoginController::class, 'store'])->middleware('guest');
+Route::get('login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('login', [LoginController::class, 'store'])->name('login')->middleware('guest');
+Route::post('logout', [LoginController::class, 'destroy'])->name('logout')->middleware('auth');
+
 
 Route::view('movie-form', 'add-movie-form.movie-form')->name('movie')->middleware('auth');
 Route::post('movie-form', [MovieController::class, 'store'])->name('movie')->middleware('auth');
+
