@@ -4,14 +4,22 @@
     <form action="{{ route('add-quote') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="flex flex-col space-y-2 mb-4">
-            <label for="movies">Select movies</label>
-            <select class="text-black h-10 rounded-md pl-2 " name="movies" id="movies">
+            <label for="movie_id">Select a movie</label>
+            <select class="text-black h-10 rounded-md pl-2 bg-white" name="movie_id" id="movie_id">
                 @foreach ($movies as $movie)
                     <option value="{{ $movie->id }}">{{ $movie->title }}</option>
                 @endforeach
             </select>
         </div>
-        <x-input name="quote" />
+        <div class="flex flex-col space-y-2 w-96 mb-4">
+            <label for="quote_en">Quote [en]</label>
+            <input class="border rounded-md h-10 text-black" type="text" id="quote_en" name="quote_en">
+        </div>
+        <div class="flex flex-col space-y-2 w-96 mb-4">
+            <label for="quote_ka">Quote [ka]</label>
+            <input type="text" class="border rounded-md h-10 text-black" id="quote_en" name="quote_en">
+        </div>
+
         <div class="flex flex-col space-y-2 mb-4">
             <label for="image">image</label>
             <input type="file" accept="image/*" name="image" id="image">
