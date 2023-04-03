@@ -20,9 +20,9 @@
         <x-button>ka</x-button>
     </div>
     @guest
-        @if (Route::currentRouteName() !== 'login')
+        @if (!request()->routeIs('login'))
             <div class="absolute right-2 top-2 text-white">
-                <a href="/login">LOG IN</a>
+                <a href="{{ route('login') }}">LOG IN</a>
             </div>
         @endif
     @endguest
