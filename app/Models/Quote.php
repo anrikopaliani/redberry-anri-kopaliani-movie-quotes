@@ -13,4 +13,9 @@ class Quote extends Model
 	protected $guarded = [];
 
 	public $translatable = ['quote'];
+
+	public function movie()
+	{
+		return $this->belongsTo(Movie::class);
+	}
 }
