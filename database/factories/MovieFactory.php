@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +19,7 @@ class MovieFactory extends Factory
 	{
 		return [
 			'title'   => $this->faker->name(),
-			'user_id' => $this->faker->randomNumber(),
+			'user_id' => User::factory(),
 		];
 	}
 }
