@@ -19,6 +19,19 @@
         <x-button>en</x-button>
         <x-button>ka</x-button>
     </div>
+    @guest
+        @if (!request()->routeIs('login'))
+            <div class="absolute right-2 top-2 text-white">
+                <a href="{{ route('login') }}">LOG IN</a>
+            </div>
+        @endif
+    @endguest
+    
+    @auth
+        <div class="absolute right-2 top-2">
+            <x-logout-button />
+        </div>
+    @endauth
     <div class="flex flex-col">
         {{ $slot }}
     </div>
