@@ -20,6 +20,7 @@ class QuotesController extends Controller
 	public function store(StoreQuoteRequest $request)
 	{
 		$validated = $request->validated();
+		$validated['image'] = $request->file('image')->store('images');
 		Quote::create([
 			'quote'    => $validated['quote'],
 			'image'    => $validated['image'],
