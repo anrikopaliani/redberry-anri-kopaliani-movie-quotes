@@ -12,12 +12,12 @@
             </select>
         </div>
         <div class="flex flex-col space-y-2 w-96 mb-4">
-            <label for="quote_en">Quote [en]</label>
-            <input class="border rounded-md h-10 text-black" type="text" id="quote_en" name="quote_en">
+            <label for="quote[en]">Quote[en]</label>
+            <input class="border rounded-md h-10 text-black" type="text" id="quote[en]" name="quote[en]">
         </div>
         <div class="flex flex-col space-y-2 w-96 mb-4">
-            <label for="quote_ka">Quote [ka]</label>
-            <input type="text" class="border rounded-md h-10 text-black" id="quote_ka" name="quote_ka">
+            <label for="quote[ka]">Quote[ka]</label>
+            <input type="text" class="border rounded-md h-10 text-black" id="quote[ka]" name="quote[ka]">
         </div>
 
         <div class="flex flex-col space-y-2 mb-4">

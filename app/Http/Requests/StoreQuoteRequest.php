@@ -14,10 +14,11 @@ class StoreQuoteRequest extends FormRequest
 	public function rules(): array
 	{
 		return [
-			'quote_en'     => 'required',
-			'quote_ka'     => 'required',
-			'movie_id'     => 'required',
-			'image'        => 'required|image',
+			'quote' => 'required',
+			// 'quote[en]'     => 'required',
+			// 'quote[ka]'     => 'required',
+			'movie_id'      => 'required',
+			'image'         => 'required|image',
 		];
 	}
 }
