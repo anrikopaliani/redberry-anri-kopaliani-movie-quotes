@@ -25,6 +25,7 @@
             </div>
         @endif
     @endguest
+    
     @auth
         <div class="absolute right-2 top-2">
             <x-logout-button />
