@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\StaticLanguageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,8 +29,4 @@ Route::post('logout', [LoginController::class, 'destroy'])->name('logout')->midd
 Route::view('movie-form', 'add-movie-form.movie-form')->name('movie')->middleware('auth');
 Route::post('movie-form', [MovieController::class, 'store'])->name('movie')->middleware('auth');
 
-Route::get('language/{locale}', function ($locale) {
-	app()->setLocale($locale);
-	session()->put('locale', $locale);
-	return back();
-});
+Route::get('language/{locale}', [StaticLanguageController::class, 'store']);
