@@ -1,8 +1,9 @@
 <x-layout>
     <form action="/login" method="POST">
         @csrf
-        <x-input name="username" />
-        <x-input name="password" type="password" />
-        <x-submit-button>Submit</x-submit-button>
+        <x-input label="{{ __('username') }}" name="username" />
+        <x-input label="{{ __('password') }}" name="password" type="password" />
+        <x-submit-button>{{ __('LOG IN') }}</x-submit-button>
+
     </form>
 </x-layout>
