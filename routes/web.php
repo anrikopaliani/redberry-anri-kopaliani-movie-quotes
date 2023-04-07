@@ -32,10 +32,9 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
 	Route::post('logout', [LoginController::class, 'destroy'])->name('logout')->middleware('auth');
-  Route::view('movie-form', 'add-movie-form.movie-form')->name('movie')->middleware('auth');
+	Route::view('movie-form', 'add-movie-form.movie-form')->name('movie')->middleware('auth');
 	Route::post('movie-form', [MovieController::class, 'store'])->name('movie')->middleware('auth');
-  
+
 	Route::get('/add-quote', [QuotesController::class, 'index'])->name('add-quote')->middleware('auth');
 	Route::post('/add-quote', [QuotesController::class, 'store'])->name('add-quote')->middleware('auth');
 });
-
