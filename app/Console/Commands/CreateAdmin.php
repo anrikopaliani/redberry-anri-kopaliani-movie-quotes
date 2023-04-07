@@ -12,7 +12,7 @@ class CreateAdmin extends Command
 	 *
 	 * @var string
 	 */
-	protected $signature = 'make:admin {username} {password}';
+	protected $signature = 'make:admin';
 
 	/**
 	 * The console command description.
@@ -26,11 +26,11 @@ class CreateAdmin extends Command
 	 */
 	public function handle(): void
 	{
-		$username = $this->argument()['username'];
-		$password = bcrypt($this->argument()['password']);
+		$username = $this->ask('username: ');
+		$password = $this->secret('password: ');
 		User::create([
 			'username' => $username,
-			'password' => $password,
+			'password' => bcrypt($password),
 		]);
 
 		echo 'admin created';
