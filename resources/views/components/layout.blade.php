@@ -16,13 +16,12 @@
 
 <body class="w-screen h-screen text-white flex justify-center items-center">
     <div class="absolute left-5 flex flex-col space-y-4">
-        <x-button>en</x-button>
-        <x-button>ka</x-button>
+        <x-language_switcher />
     </div>
     @guest
         @if (!request()->routeIs('login'))
             <div class="absolute right-2 top-2 text-white">
-                <a href="{{ route('login') }}">LOG IN</a>
+                <a href="{{ route('login') }}">{{ __('LOG IN') }}</a>
             </div>
         @endif
     @endguest
@@ -31,7 +30,7 @@
             <x-logout-button />
         </div>
     @endauth
-        <div class="flex flex-col">
+    <div class="flex flex-col">
         {{ $slot }}
     </div>
 </body>
