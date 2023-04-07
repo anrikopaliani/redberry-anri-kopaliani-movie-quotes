@@ -26,12 +26,13 @@
             </div>
         @endif
     @endguest
+    
     @auth
         <div class="absolute right-2 top-2">
             <x-logout-button />
         </div>
     @endauth
-        <div class="flex flex-col">
+    <div class="flex flex-col">
         {{ $slot }}
     </div>
 </body>
