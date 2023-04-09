@@ -26,8 +26,8 @@ Route::get('/', function () {
 Route::get('language/{locale}', [StaticLanguageController::class, 'store']);
 
 Route::middleware('guest')->group(function () {
-	Route::get('login', [LoginController::class, 'index'])->name('login')->middleware('guest');
-	Route::post('login', [LoginController::class, 'store'])->name('login')->middleware('guest');
+	Route::get('login', [LoginController::class, 'index'])->name('login');
+	Route::post('login', [LoginController::class, 'store'])->name('login');
 });
 
 Route::middleware('auth')->group(function () {
@@ -39,4 +39,6 @@ Route::middleware('auth')->group(function () {
 	Route::post('/add-quote', [QuotesController::class, 'store'])->name('add-quote');
 
 	Route::get('movies/{movie}', [MovieController::class, 'show']);
+
+	Route::delete('quotes/{quote}', [QuotesController::class, 'destroy']);
 });
