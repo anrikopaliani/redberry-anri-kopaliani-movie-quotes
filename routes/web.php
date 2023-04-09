@@ -39,4 +39,5 @@ Route::middleware('auth')->group(function () {
 	Route::post('/add-quote', [QuotesController::class, 'store'])->name('add-quote');
 
 	Route::get('movies/{movie}', [MovieController::class, 'show']);
+
 });
