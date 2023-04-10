@@ -41,4 +41,7 @@ Route::middleware('auth')->group(function () {
 	Route::get('movies/{movie}', [MovieController::class, 'show']);
 
 	Route::delete('quotes/{quote}', [QuotesController::class, 'destroy']);
+	Route::get('quotes/{quote}/edit', [QuotesController::class, 'edit']);
+
+	Route::patch('quotes/{quote}', [QuotesController::class, 'update']);
 });

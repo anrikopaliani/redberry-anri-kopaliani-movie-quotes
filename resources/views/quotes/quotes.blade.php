@@ -9,7 +9,7 @@
                     <p>"{{ $item->getTranslation('quote', 'en') }}"</p>
                 </div>
                 <div class="flex justify-end">
-                    <button class="pr-2">Update</button>
+                    <a href="/quotes/{{ $item->id }}/edit" class="pr-2">Update</a>
                     <form action="/quotes/{{ $item->id }}" method="POST">
                         @csrf
                         @method('DELETE')
