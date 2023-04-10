@@ -6,7 +6,7 @@
                 <img class="object-cover" width="700"
                     src="{{ URL::to('/') . '/storage/' . str_replace('images/', '', $item->image) }}">
                 <div class="bg-white w-full text-black h-11">
-                    <p>"{{ $item->getTranslation('quote', 'en') }}"</p>
+                    <p>"{{ $item->getTranslation('quote', app()->getLocale()) }}"</p>
                 </div>
                 <div class="flex justify-end">
                     <a href="/quotes/{{ $item->id }}/edit" class="pr-2">Update</a>
