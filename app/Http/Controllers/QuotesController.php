@@ -57,7 +57,6 @@ class QuotesController extends Controller
 
 		$quote->update($attributes);
 
-		// return back();
 		return redirect("/movies/$quote->movie_id");
 	}
 }
