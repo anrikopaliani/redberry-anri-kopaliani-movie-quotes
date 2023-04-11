@@ -20,12 +20,4 @@ class StoreQuoteRequest extends FormRequest
 			'image'            => 'required|image',
 		];
 	}
-
-	// public function messages()
-	// {
-	// 	return [
-	// 		'quote.en.required' => 'The Quote[en] is required',
-	// 		'quote.ka.required' => 'The Quote[ka] is required',
-	// 	];
-	// }
 }
