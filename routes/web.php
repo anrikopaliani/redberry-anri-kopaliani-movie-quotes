@@ -4,6 +4,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\QuotesController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\StaticLanguageController;
+use App\Models\Quote;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +19,9 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', function () {
+	$data = Quote::all()->random();
 	return view('movies.index', [
-		'movie' => 'shawshank redemption quote',
+		'movie' => $data,
 	]);
 });
 
