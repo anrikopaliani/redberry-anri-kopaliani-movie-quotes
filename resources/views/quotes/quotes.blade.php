@@ -1,4 +1,5 @@
 <x-layout>
+
     <h1 class="absolute text-5xl top-16  left-1/4">{{ $title }}</h1>
     <div class="flex flex-col h-96">
         @foreach ($quotes as $item)
@@ -13,9 +14,8 @@
                     <form action="/quotes/{{ $item->id }}" method="POST">
                         @csrf
                         @method('DELETE')
-
                         <button>Delete</button>
-                    </form>
+                    </form> 
                 </div>
             </section>
         @endforeach
