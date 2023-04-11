@@ -4,6 +4,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\QuotesController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\StaticLanguageController;
+use App\Models\Quote;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +19,9 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', function () {
+	$data = Quote::all()->random();
 	return view('movies.index', [
-		'movie' => 'shawshank redemption quote',
+		'movie' => $data,
 	]);
 });
 
@@ -39,9 +41,9 @@ Route::middleware('auth')->group(function () {
 	Route::post('/add-quote', [QuotesController::class, 'store'])->name('add-quote');
 
 	Route::get('movies/{movie}', [MovieController::class, 'show']);
-
-	Route::delete('quotes/{quote}', [QuotesController::class, 'destroy']);
+  
+  Route::delete('quotes/{quote}', [QuotesController::class, 'destroy']);
 	Route::get('quotes/{quote}/edit', [QuotesController::class, 'edit']);
-
 	Route::patch('quotes/{quote}', [QuotesController::class, 'update']);
+
 });
