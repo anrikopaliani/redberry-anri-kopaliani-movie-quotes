@@ -21,7 +21,7 @@
         <div class="flex flex-col space-y-2 w-96 mb-4">
             <label for="quote[ka]">{{ __('Quote[ka]') }}</label>
             <input type="text" class="border rounded-md h-10 text-black" id="quote[ka]" name="quote[ka]">
-            @error('quote.ka.')
+            @error('quote.ka')
                 <p class=" text-red-600">{{ $message }}</p>
             @enderror
         </div>
