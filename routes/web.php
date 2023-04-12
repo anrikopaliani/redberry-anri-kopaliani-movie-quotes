@@ -3,7 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\QuotesController;
 use App\Http\Controllers\MovieController;
-use App\Http\Controllers\RandomMovieController;
+use App\Http\Controllers\RandomQuoteController;
 use App\Http\Controllers\StaticLanguageController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', [RandomMovieController::class, 'index']);
+Route::get('/', [RandomQuoteController::class, 'index']);
 
 Route::get('language/{locale}', [StaticLanguageController::class, 'store']);
 

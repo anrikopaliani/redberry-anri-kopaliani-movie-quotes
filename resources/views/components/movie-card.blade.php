@@ -1,9 +1,9 @@
-@props(['movie'])
+@props(['quote'])
 
 <div class="flex flex-col">
     <img width="600" height="386px" class="mb-6 mx-auto"
-        src="{{ URL::to('/') . '/storage/' . str_replace('images/', '', $movie->image) }}" alt="">
-    <p class="text-center text-5xl mb-12">{{ $movie->getTranslation('quote', app()->getLocale()) }}</p>
+        src="{{ URL::to('/') . '/storage/' . str_replace('images/', '', $quote->image) }}" alt="">
+    <p class="text-center text-5xl mb-12">{{ $quote->getTranslation('quote', app()->getLocale()) }}</p>
 
-    <a href="/movies/{{ $movie->movie_id }}" class="text-center underline text-5xl">{{ $movie->movie->title }}</a>
+    <a href="/movies/{{ $quote->movie_id }}" class="text-center underline text-5xl">{{ $quote->movie->title }}</a>
 </div>
