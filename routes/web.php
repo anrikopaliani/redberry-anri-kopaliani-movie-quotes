@@ -36,9 +36,10 @@ Route::middleware('auth')->group(function () {
 	Route::post('/add-quote', [QuotesController::class, 'store'])->name('add-quote');
 
 	Route::get('movies/{movie}', [MovieController::class, 'show']);
-  
-  Route::delete('quotes/{quote}', [QuotesController::class, 'destroy']);
-	Route::get('quotes/{quote}/edit', [QuotesController::class, 'edit']);
-	Route::patch('quotes/{quote}', [QuotesController::class, 'update']);
 
+	Route::prefix('quotes')->controller(QuotesController::class)->group(function () {
+		Route::delete('/{quote}', 'destroy');
+		Route::get('/{quote}/edit', 'edit');
+		Route::patch('/{quote}', 'update');
+	});
 });
