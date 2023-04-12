@@ -3,8 +3,8 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\QuotesController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\RandomQuoteController;
 use App\Http\Controllers\StaticLanguageController;
-use App\Models\Quote;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,12 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', function () {
-	$data = Quote::all()->random();
-	return view('movies.index', [
-		'movie' => $data,
-	]);
-});
+Route::get('/', [RandomQuoteController::class, 'index']);
 
 Route::get('language/{locale}', [StaticLanguageController::class, 'store']);
 
