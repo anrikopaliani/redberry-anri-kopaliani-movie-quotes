@@ -23,7 +23,7 @@ Route::get('/', [RandomQuoteController::class, 'index']);
 Route::get('language/{locale}', [StaticLanguageController::class, 'store']);
 
 Route::middleware('guest')->group(function () {
-	Route::get('login', [LoginController::class, 'index'])->name('login');
+	Route::get('login', [LoginController::class, 'index'])->name('login.get');
 	Route::post('login', [LoginController::class, 'store'])->name('login.post');
 });
 
