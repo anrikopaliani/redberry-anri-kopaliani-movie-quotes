@@ -24,7 +24,7 @@ Route::get('language/{locale}', [StaticLanguageController::class, 'store']);
 
 Route::middleware('guest')->group(function () {
 	Route::get('login', [LoginController::class, 'index'])->name('login');
-	Route::post('login', [LoginController::class, 'store'])->name('login');
+	Route::post('login', [LoginController::class, 'store'])->name('login.post');
 });
 
 Route::middleware('auth')->group(function () {
