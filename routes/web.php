@@ -29,11 +29,11 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
 	Route::post('logout', [LoginController::class, 'destroy'])->name('logout');
-	Route::view('movie-form', 'add-movie-form.movie-form')->name('movie');
-	Route::post('movie-form', [MovieController::class, 'store'])->name('movie');
+	Route::view('movie-form', 'add-movie-form.movie-form')->name('movie.get');
+	Route::post('movie-form', [MovieController::class, 'store'])->name('movie.post');
 
-	Route::get('/add-quote', [QuotesController::class, 'index'])->name('add-quote');
-	Route::post('/add-quote', [QuotesController::class, 'store'])->name('add-quote');
+	Route::get('/add-quote', [QuotesController::class, 'index'])->name('add-quote.get');
+	Route::post('/add-quote', [QuotesController::class, 'store'])->name('add-quote.post');
 
 	Route::get('movies/{movie}', [MovieController::class, 'show']);
 
