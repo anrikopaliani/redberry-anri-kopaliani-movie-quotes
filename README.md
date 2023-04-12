@@ -6,10 +6,10 @@ Movie Quotes არის პლატფორმა სადაც შეგ�
 
 ## Prerequisites
 
--   <p><img src="https://e7.pngegg.com/pngimages/906/282/png-clipart-logo-computer-icons-php-wm-logo-text-label.png" width="35" alt="php"> PHP@7.2 and up</p>
--   <p><img src="https://e7.pngegg.com/pngimages/1018/16/png-clipart-mysql-workbench-database-mysql-cluster-others-text-logo.png" width="35" alt="mysql">MYSQL@8 and up</p>
--   <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/2560px-Npm-logo.svg.png" alt="npm">npm@6 and up</p>
--   <p><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Logo-composer-transparent.png?20150215175858" alt="composer">composer@2 and up</p>
+-   <p><img src="https://e7.pngegg.com/pngimages/906/282/png-clipart-logo-computer-icons-php-wm-logo-text-label.png" width="35" height="35" alt="php"> PHP@7.2 and up</p>
+-   <p><img src="https://e7.pngegg.com/pngimages/1018/16/png-clipart-mysql-workbench-database-mysql-cluster-others-text-logo.png" width="35" height="35" alt="mysql">MYSQL@8 and up</p>
+-   <p><img width="35" height="35" height src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/2560px-Npm-logo.svg.png" alt="npm">npm@6 and up</p>
+-   <p><img width="35" height="35" src="https://upload.wikimedia.org/wikipedia/commons/2/26/Logo-composer-transparent.png?20150215175858" alt="composer">composer@2 and up</p>
 
 ## Tech Stack
 
