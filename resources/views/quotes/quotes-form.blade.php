@@ -1,7 +1,7 @@
 <x-layout>
     <h1 class="text-center text-5xl mb-6">{{ __('Add A Quote') }}</h1>
 
-    <form action="{{ route('add-quote') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('add-quote.post') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="flex flex-col space-y-2 mb-4">
             <label for="movie_id">{{ __('Select a Movie') }}</label>
