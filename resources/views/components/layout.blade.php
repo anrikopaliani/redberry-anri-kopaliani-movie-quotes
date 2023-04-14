@@ -20,7 +20,7 @@
         <x-language_switcher />
     </div>
     @guest
-        @if (!request()->routeIs('login'))
+        @if (!request()->routeIs('login.get'))
             <div class="absolute right-2 top-2 text-white">
                 <a href="{{ route('login.get') }}">{{ __('LOG IN') }}</a>
             </div>
