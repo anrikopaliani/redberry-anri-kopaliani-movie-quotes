@@ -8,7 +8,7 @@ class RandomQuoteController extends Controller
 {
 	public function index()
 	{
-		$data = Quote::all()->random();
+		$data = Quote::inRandomOrder()->first();
 		return view('quotes.index', [
 			'quote' => $data,
 		]);
