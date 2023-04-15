@@ -4,6 +4,8 @@
 
 Movie Quotes არის პლატფორმა სადაც შეგიძლია ნახო Random-ად ფილმის ციტატები.
 
+<p align="center"><img src="./resources/img/screenshot.png" width="600" height="500"></p>
+
 ## Prerequisites
 
 -   <p><img src="https://e7.pngegg.com/pngimages/906/282/png-clipart-logo-computer-icons-php-wm-logo-text-label.png" width="35" height="35" alt="php"> PHP@7.2 and up</p>
