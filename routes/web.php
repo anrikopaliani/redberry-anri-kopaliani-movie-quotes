@@ -22,6 +22,8 @@ Route::get('/', [RandomQuoteController::class, 'index']);
 
 Route::get('language/{locale}', [StaticLanguageController::class, 'store']);
 
+Route::get('movies/{movie}', [MovieController::class, 'show']);
+
 Route::middleware('guest')->group(function () {
 	Route::get('login', [LoginController::class, 'index'])->name('login.get');
 	Route::post('login', [LoginController::class, 'store'])->name('login.post');
@@ -34,8 +36,6 @@ Route::middleware('auth')->group(function () {
 
 	Route::get('/add-quote', [QuotesController::class, 'index'])->name('add-quote.get');
 	Route::post('/add-quote', [QuotesController::class, 'store'])->name('add-quote.post');
-
-	Route::get('movies/{movie}', [MovieController::class, 'show']);
 
 	Route::prefix('quotes')->controller(QuotesController::class)->group(function () {
 		Route::delete('/{quote}', 'destroy');
