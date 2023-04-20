@@ -17,7 +17,7 @@
 
 <body class="w-screen h-screen text-white flex justify-center items-center">
     <div class="absolute left-5 flex flex-col space-y-4">
-        <x-language_switcher />
+        <x-language-switcher />
     </div>
     @guest
         @if (!request()->routeIs('login'))
