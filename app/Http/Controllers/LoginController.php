@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreLoginRequest;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 
 class LoginController extends Controller
 {
-	public function index()
+	public function index(): View
 	{
 		return view('login.login');
 	}
 
-	public function store(StoreLoginRequest $request)
+	public function store(StoreLoginRequest $request): RedirectResponse
 	{
 		// retrieve data
 		$validated = $request->validated();
@@ -25,7 +27,7 @@ class LoginController extends Controller
 		return back();
 	}
 
-	public function destroy()
+	public function destroy(): RedirectResponse
 	{
 		auth()->logout();
 
