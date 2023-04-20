@@ -1,7 +1,7 @@
 <x-layout>
     <h1 class="text-center text-3xl mb-6">{{ __('Edit A Quote') }}</h1>
 
-    <form method="POST" action="/quotes/{{ $quote->id }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('quote.update', ['quote' => $quote->id]) }}" enctype="multipart/form-data">
         @csrf
         @method('PATCH')
 

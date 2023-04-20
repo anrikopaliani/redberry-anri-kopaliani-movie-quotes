@@ -9,14 +9,16 @@
                 <div class="bg-white w-full text-black h-11">
                     <p>"{{ $item->getTranslation('quote', app()->getLocale()) }}"</p>
                 </div>
-                <div class="flex justify-end">
-                    <a href="/quotes/{{ $item->id }}/edit" class="pr-2">Update</a>
-                    <form action="/quotes/{{ $item->id }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button>Delete</button>
-                    </form> 
-                </div>
+                @auth
+                    <div class="flex justify-end">
+                        <a href="{{ route('quote.edit', ['quote' => $item->id]) }}" class="pr-2">Update</a>
+                        <form action="{{ route('quote.delete', ['quote' => $item->id]) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button>Delete</button>
+                        </form>
+                    </div>
+                @endauth
             </section>
         @endforeach
     </div>
