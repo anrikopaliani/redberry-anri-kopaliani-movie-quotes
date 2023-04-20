@@ -38,8 +38,8 @@ Route::middleware('auth')->group(function () {
 	Route::post('/add-quote', [QuotesController::class, 'store'])->name('add-quote.post');
 
 	Route::prefix('quotes')->controller(QuotesController::class)->group(function () {
-		Route::delete('/{quote}', 'destroy');
-		Route::get('/{quote}/edit', 'edit');
-		Route::patch('/{quote}', 'update');
+		Route::delete('/{quote}', 'destroy')->name('quote.delete');
+		Route::get('/{quote}/edit', 'edit')->name('quote.edit');
+		Route::patch('/{quote}', 'update')->name('quote.update');
 	});
 });
