@@ -14,7 +14,7 @@ class StoreLoginRequest extends FormRequest
 	public function rules(): array
 	{
 		return [
-			'username' => 'required',
+			'username' => 'required|exists:users,username',
 			'password' => 'required',
 		];
 	}
