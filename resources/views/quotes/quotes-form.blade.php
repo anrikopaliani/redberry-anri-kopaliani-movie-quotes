@@ -7,7 +7,9 @@
             <label for="movie_id">{{ __('Select a Movie') }}</label>
             <select class="text-black h-10 rounded-md pl-2 bg-white" name="movie_id" id="movie_id">
                 @foreach ($movies as $movie)
-                    <option value="{{ $movie->id }}">{{ $movie->title }}</option>
+                    <option value="{{ $movie->id }}">
+                        {{ $movie->title }}
+                    </option>
                 @endforeach
             </select>
         </div>

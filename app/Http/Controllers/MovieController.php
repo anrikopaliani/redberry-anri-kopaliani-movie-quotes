@@ -11,6 +11,7 @@ class MovieController extends Controller
 	{
 		$validated = $request->validated();
 		$validated['user_id'] = auth()->user()->id;
+
 		Movie::create($validated);
 
 		return redirect('/');
@@ -20,7 +21,7 @@ class MovieController extends Controller
 	{
 		$quotes = $movie->quotes;
 		return view('quotes.quotes', [
-			'title'  => $movie->title,
+			'title'  => $movie->getTranslation('title', app()->getLocale()),
 			'quotes' => $quotes,
 		]);
 	}
