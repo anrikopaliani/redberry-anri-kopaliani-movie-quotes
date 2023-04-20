@@ -4,6 +4,8 @@
 
 Movie Quotes არის პლატფორმა სადაც შეგიძლია ნახო Random-ად ფილმის ციტატები.
 
+![Screenshot from 2023-04-15 10-17-27](https://user-images.githubusercontent.com/73776304/232194677-f9146a6c-9f6a-490c-aa13-022f8a6ed38b.png)
+
 ## Prerequisites
 
 -   <p><img src="https://e7.pngegg.com/pngimages/906/282/png-clipart-logo-computer-icons-php-wm-logo-text-label.png" width="35" height="35" alt="php"> PHP@7.2 and up</p>
@@ -100,4 +102,4 @@ php artisan serve
 
 ## DrawSQL
 
-![Screenshot from 2023-04-12 03-22-37](https://user-images.githubusercontent.com/73776304/231309373-5a751d42-1eca-4b68-ace9-65a6b87f1866.png)
+![Screenshot from 2023-04-15 11-12-33](https://user-images.githubusercontent.com/73776304/232194541-4f417bba-776f-4218-98a9-07681523c894.png)
