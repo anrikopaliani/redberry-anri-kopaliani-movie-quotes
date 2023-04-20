@@ -3,8 +3,8 @@
 return [
 	'required'          => ':attribute არ არის მითითებული!',
 	'image'             => 'ფაილი უნდა იყოს სურათი!',
-
-	'attributes' => [
+	'exists'            => ':attribute არ არსებობს',
+	'attributes'        => [
 		'username'  => 'მომხმარებლის სახელი',
 		'password'  => 'პაროლი',
 		'quote[en]' => 'ციტატა[ინგ]',
