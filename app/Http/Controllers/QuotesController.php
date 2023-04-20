@@ -6,10 +6,12 @@ use App\Http\Requests\StoreQuoteRequest;
 use App\Http\Requests\StoreUpdateQuoteRequest;
 use App\Models\Movie;
 use App\Models\Quote;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 
 class QuotesController extends Controller
 {
-	public function index()
+	public function index(): View
 	{
 		$movies = Movie::all();
 
@@ -18,7 +20,7 @@ class QuotesController extends Controller
 		]);
 	}
 
-	public function store(StoreQuoteRequest $request)
+	public function store(StoreQuoteRequest $request): RedirectResponse
 	{
 		$validated = $request->validated();
 		$validated['image'] = $request->file('image')->store('images');
@@ -32,7 +34,7 @@ class QuotesController extends Controller
 		return redirect('/');
 	}
 
-	public function destroy(Quote $quote)
+	public function destroy(Quote $quote): RedirectResponse
 	{
 		$quote->delete();
 
@@ -46,7 +48,7 @@ class QuotesController extends Controller
 		]);
 	}
 
-	public function update(StoreUpdateQuoteRequest $request, Quote $quote)
+	public function update(StoreUpdateQuoteRequest $request, Quote $quote): RedirectResponse
 	{
 		$attributes = $request->validated();
 
