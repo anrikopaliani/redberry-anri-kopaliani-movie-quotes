@@ -5,5 +5,6 @@
         src="{{ URL::to('/') . '/storage/' . str_replace('images/', '', $quote->image) }}" alt="">
     <p class="text-center text-3xl mb-12">{{ $quote->getTranslation('quote', app()->getLocale()) }}</p>
 
-    <a href="/movies/{{ $quote->movie_id }}" class="text-center underline text-5xl">{{ $quote->movie->title }}</a>
+    <a href="{{ route('movie.show', ['movie' => $quote->movie_id]) }}"
+        class="text-center underline text-5xl">{{ $quote->movie->getTranslation('title', app()->getLocale()) }}</a>
 </div>
