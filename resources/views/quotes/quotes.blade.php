@@ -1,12 +1,12 @@
 <x-layout>
 
-    <h1 class="absolute text-5xl top-16  left-1/4">{{ $title }}</h1>
-    <div class="flex flex-col h-96">
+    <h1 class=" text-5xl">{{ $title }}</h1>
+    <div class="flex flex-col h-96 mt-20 mx-auto" style="width: 700px">
         @foreach ($quotes as $item)
-            <section class="flex flex-col mt-5 pb-20">
+            <section class="flex flex-col  mt-5 pb-20 w-full">
                 <img class="object-cover" width="700"
                     src="{{ URL::to('/') . '/storage/' . str_replace('images/', '', $item->image) }}">
-                <div class="bg-white w-full text-black h-11">
+                <div class="bg-white w-full text-black break-words">
                     <p>"{{ $item->getTranslation('quote', app()->getLocale()) }}"</p>
                 </div>
                 @auth
