@@ -27,4 +27,11 @@ class MovieController extends Controller
 			'quotes' => $quotes,
 		]);
 	}
+
+	public function destroy(Movie $movie)
+	{
+		$movie->delete();
+
+		return back();
+	}
 }

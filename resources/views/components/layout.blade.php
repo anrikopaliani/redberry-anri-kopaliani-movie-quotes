@@ -33,7 +33,7 @@
             <x-logout-button />
         </div>
     @endauth
-    <div class="flex flex-col">
+    <div class="flex flex-col ">
         {{ $slot }}
     </div>
 </body>

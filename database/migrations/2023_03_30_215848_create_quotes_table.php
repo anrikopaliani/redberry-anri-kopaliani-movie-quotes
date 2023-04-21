@@ -14,7 +14,7 @@ return new class extends Migration {
 			$table->id();
 			$table->json('quote');
 			$table->string('image');
-			$table->foreignId('movie_id')->references('id')->on('movies');
+			$table->foreignId('movie_id')->references('id')->on('movies')->cascadeOnDelete();
 			$table->timestamps();
 		});
 	}

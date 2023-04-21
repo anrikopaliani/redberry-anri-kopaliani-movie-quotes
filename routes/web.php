@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\QuotesController;
 use App\Http\Controllers\MovieController;
@@ -42,4 +43,10 @@ Route::middleware('auth')->group(function () {
 		Route::get('/{quote}/edit', 'edit')->name('quote.edit');
 		Route::patch('/{quote}', 'update')->name('quote.update');
 	});
+
+	Route::prefix('movies')->controller(MovieController::class)->group(function () {
+		Route::delete('/{movie}', 'destroy')->name('movie.delete');
+	});
+
+	Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
