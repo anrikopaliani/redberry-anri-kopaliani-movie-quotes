@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Movies\UpdateRequest;
 use App\Http\Requests\StoreMovieRequest;
 use App\Models\Movie;
 use Illuminate\Http\RedirectResponse;
@@ -28,7 +29,23 @@ class MovieController extends Controller
 		]);
 	}
 
-	public function destroy(Movie $movie)
+	public function edit(Movie $movie): View
+	{
+		return view('movies.edit', [
+			'movie' => $movie,
+		]);
+	}
+
+	public function update(UpdateRequest $request, Movie $movie): RedirectResponse
+	{
+		$attributes = $request->validated();
+
+		$movie->update($attributes);
+
+		return redirect()->route('dashboard');
+	}
+
+	public function destroy(Movie $movie): RedirectResponse
 	{
 		$movie->delete();
 

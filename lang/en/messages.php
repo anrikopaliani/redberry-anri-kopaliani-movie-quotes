@@ -14,4 +14,7 @@ return [
 	'Quote[en]'      => 'Quote[en]',
 	'Quote[ka]'      => 'Quote[ka]',
 	'Edit A Quote'   => 'Edit A Quote',
+	'Edit A Movie'   => 'Edit A Movie',
+	'Title[ka]'      => 'Title[ka]',
+	'Title[en]'      => 'Title[en]',
 ];

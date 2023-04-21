@@ -24,7 +24,8 @@
                                         {{ $movie->getTranslation('title', app()->getLocale()) }}
                                     </p>
                                     <div class="flex space-x-1">
-                                        <a href="" class="bg-black text-white p-1">edit</a>
+                                        <a href="{{ route('movie.edit', ['movie' => $movie->id]) }}"
+                                            class="bg-black text-white p-1">edit</a>
                                         <form method="POST"
                                             action="{{ route('movie.delete', ['movie' => $movie->id]) }}">
                                             @csrf

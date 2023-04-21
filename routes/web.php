@@ -31,9 +31,13 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-	Route::post('logout', [LoginController::class, 'destroy'])->name('logout');
-	Route::view('movie-form', 'add-movie-form.movie-form')->name('movie.get');
-	Route::post('movie-form', [MovieController::class, 'store'])->name('movie.post');
+	Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
+	Route::view('/movie-form', 'add-movie-form.movie-form')->name('movie.get');
+
+	Route::controller(MovieController::class)->group(function () {
+		Route::post('movie-form', 'store')->name('movie.post');
+		Route::get('/{movie}/edit', 'edit')->name('movie.edit');
+	});
 
 	Route::get('/add-quote', [QuotesController::class, 'index'])->name('add-quote.get');
 	Route::post('/add-quote', [QuotesController::class, 'store'])->name('add-quote.post');
@@ -46,7 +50,9 @@ Route::middleware('auth')->group(function () {
 
 	Route::prefix('movies')->controller(MovieController::class)->group(function () {
 		Route::delete('/{movie}', 'destroy')->name('movie.delete');
+		Route::get('/{movie}/edit', 'edit')->name('movie.edit');
+		Route::patch('/{movie}', 'update')->name('movie.update');
 	});
 
-	Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+	Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
