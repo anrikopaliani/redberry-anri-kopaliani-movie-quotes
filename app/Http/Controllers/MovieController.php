@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Movies\StoreMovieRequest;
 use App\Http\Requests\Movies\UpdateRequest;
-use App\Http\Requests\StoreMovieRequest;
 use App\Models\Movie;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;

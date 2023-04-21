@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreQuoteRequest;
-use App\Http\Requests\StoreUpdateQuoteRequest;
+use App\Http\Requests\Quotes\StoreQuoteRequest;
+use App\Http\Requests\Quotes\UpdateRequest;
 use App\Models\Movie;
 use App\Models\Quote;
 use Illuminate\Http\RedirectResponse;
@@ -48,7 +48,7 @@ class QuotesController extends Controller
 		]);
 	}
 
-	public function update(StoreUpdateQuoteRequest $request, Quote $quote): RedirectResponse
+	public function update(UpdateRequest $request, Quote $quote): RedirectResponse
 	{
 		$attributes = $request->validated();
 
