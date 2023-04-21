@@ -15,7 +15,7 @@ Movie Quotes არის პლატფორმა სადაც შეგ�
 
 ## Tech Stack
 
--   <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/985px-Laravel.svg.png" width="35" alt="laravel" height="35"><a href="https://laravel.com/docs/8.x">Laravel@8.x</a> - back-end framework</p>
+-   <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/985px-Laravel.svg.png" width="35" alt="laravel" height="35"><a href="https://laravel.com/docs/8.x">Laravel@10.x</a> - back-end framework</p>
 -   <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1024px-Tailwind_CSS_Logo.svg.png" width="35" height="35" alt="tailwind"><a href="https://tailwindcss.com/docs/installation">Tailwind CSS</a> - CSS framework</p>
 -   <p><img src="https://avatars.githubusercontent.com/u/7535935?s=280&v=4" width="35" height="35" alt="spatie"><a href="https://github.com/spatie/laravel-translatable">Spatie Translatable </a> - package for translation</p>
 

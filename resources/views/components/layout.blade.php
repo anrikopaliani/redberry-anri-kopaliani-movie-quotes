@@ -23,7 +23,7 @@
     @guest
         @if (!request()->routeIs('login.get'))
             <div class="absolute right-2 top-2 text-white">
-                <a href="{{ route('login.get') }}">{{ __('LOG IN') }}</a>
+                <a href="{{ route('login.get') }}">{{ __('messages.LOG IN') }}</a>
             </div>
         @endif
     @endguest
