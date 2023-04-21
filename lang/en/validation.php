@@ -181,5 +181,7 @@ return [
 	'attributes' => [
 		'quote.ka' => 'Quote[ka]',
 		'quote.en' => 'Quote[en]',
+		'title.en' => 'title[en]',
+		'title.ka' => 'title[ka]',
 	],
 ];

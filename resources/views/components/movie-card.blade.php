@@ -6,5 +6,6 @@
     <p class="text-center text-3xl mb-12 break-words">
         {{ $quote->getTranslation('quote', app()->getLocale()) }}</p>
 
-    <a href="/movies/{{ $quote->movie_id }}" class="text-center underline text-5xl">{{ $quote->movie->title }}</a>
+    <a href="{{ route('movie.show', ['movie' => $quote->movie_id]) }}"
+        class="text-center underline text-5xl">{{ $quote->movie->getTranslation('title', app()->getLocale()) }}</a>
 </div>
