@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreMovieRequest;
+use App\Http\Requests\Movies\StoreMovieRequest;
+use App\Http\Requests\Movies\UpdateRequest;
 use App\Models\Movie;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
@@ -26,5 +27,28 @@ class MovieController extends Controller
 			'title'  => $movie->getTranslation('title', app()->getLocale()),
 			'quotes' => $quotes,
 		]);
+	}
+
+	public function edit(Movie $movie): View
+	{
+		return view('movies.edit', [
+			'movie' => $movie,
+		]);
+	}
+
+	public function update(UpdateRequest $request, Movie $movie): RedirectResponse
+	{
+		$attributes = $request->validated();
+
+		$movie->update($attributes);
+
+		return redirect()->route('dashboard');
+	}
+
+	public function destroy(Movie $movie): RedirectResponse
+	{
+		$movie->delete();
+
+		return back();
 	}
 }
