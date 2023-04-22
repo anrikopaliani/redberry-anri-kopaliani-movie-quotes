@@ -17,4 +17,6 @@ return [
 	'Edit A Movie'   => 'Edit A Movie',
 	'Title[ka]'      => 'Title[ka]',
 	'Title[en]'      => 'Title[en]',
+	'Update'         => 'Update',
+	'Delete'         => 'Delete',
 ];
