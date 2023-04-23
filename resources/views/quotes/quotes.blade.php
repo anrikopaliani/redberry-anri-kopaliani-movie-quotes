@@ -11,11 +11,12 @@
                 </div>
                 @auth
                     <div class="flex justify-end">
-                        <a href="{{ route('quote.edit', ['quote' => $item->id]) }}" class="pr-2">Update</a>
+                        <a href="{{ route('quote.edit', ['quote' => $item->id]) }}"
+                            class="pr-2">{{ __('messages.Update') }}</a>
                         <form action="{{ route('quote.delete', ['quote' => $item->id]) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button>Delete</button>
+                            <button>{{ __('messages.Delete') }}</button>
                         </form>
                     </div>
                 @endauth

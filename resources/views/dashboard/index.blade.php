@@ -1,7 +1,7 @@
-<x-layout>
-    <div class="bg-white text-black h-full mt-44 w-full mb-10">
+<x-dashboard-layout>
+    <div class="bg-white text-black  mt-20 w-full mb-20">
 
-        <div class="overflow-x-auto border-x border-t">
+        <div class="overflow-x-auto max-h-screen border-x border-t">
             <table class="table-auto w-full">
                 <thead class="border-b">
                     <tr class="bg-gray-100">
@@ -64,4 +64,4 @@
             </table>
         </div>
     </div>
-</x-layout>
+</x-dashboard-layout>
