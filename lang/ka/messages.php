@@ -18,4 +18,6 @@ return [
 	'Title[ka]'          => 'სათაური[ქართ]',
 	'Title[en]'          => 'სათაური[ინგ]',
 	'Incorrect Password' => 'არასწორი პაროლი',
+	'Update'         => 'განახლება',
+	'Delete'         => 'წაშლა',
 ];
