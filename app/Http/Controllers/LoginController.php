@@ -23,8 +23,7 @@ class LoginController extends Controller
 			return redirect('/');
 		}
 
-		// if auth failed
-		return back();
+		return back()->withErrors(['password' => __('messages.Incorrect Password')])->withInput(['username' => $validated['username']]);
 	}
 
 	public function destroy(): RedirectResponse
