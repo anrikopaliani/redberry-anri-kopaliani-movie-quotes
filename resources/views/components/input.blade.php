@@ -6,7 +6,8 @@
         <input value="{{ $type === 'text' ? old($name) : '' }}" class="border w-full rounded-md h-10 text-black px-4"
             type="{{ $type }}" id="{{ $name }}" name="{{ $name }}">
         @error($name)
-            <p class="absolute text-red-600">{{ $message }}</p>
+            <p class="absolute text-red-600">
+                {{ $message === 'The selected username is invalid.' ? 'User credentials are incorrect.' : $message }}</p>
         @enderror
     </div>
 </div>
