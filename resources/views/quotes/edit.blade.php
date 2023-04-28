@@ -20,8 +20,7 @@
             <label for="image">{{ __('messages.image') }}</label>
             <input type="file" accept="image/*" name="image" id="image"
                 value="{{ old('image', $quote->image) }}">
-            <img src="{{ URL::to('/') . '/storage/' . str_replace('images/', '', $quote->image) }}" width="100"
-                height="100" alt="">
+            <img src="{{ URL::to('/') . '/storage/' . $quote->image }}" width="100" height="100" alt="">
         </div>
         <x-submit-button>{{ __('messages.Submit') }}</x-submit-button>
     </form>
