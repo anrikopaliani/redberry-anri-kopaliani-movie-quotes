@@ -10,7 +10,7 @@
             <input class="border rounded-md h-10 text-black" value="{{ $movie->getTranslation('title', 'en') }}"
                 type="text" id="title[en]" name="title[en]">
             @error('title.en')
-                <p class=" text-red-600">{{ $message }}</p>
+                <p class="absolute  text-red-600">{{ $message }}</p>
             @enderror
         </div>
         <div class="flex flex-col space-y-2 w-96 mb-4">
@@ -18,7 +18,7 @@
             <input class="border rounded-md h-10 text-black" value="{{ $movie->getTranslation('title', 'ka') }}"
                 type="text" id="title[ka]" name="title[ka]">
             @error('title.ka')
-                <p class=" text-red-600">{{ $message }}</p>
+                <p class="absolute  text-red-600">{{ $message }}</p>
             @enderror
         </div>
         <x-submit-button>{{ __('Submit') }}</x-submit-button>
