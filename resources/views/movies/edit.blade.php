@@ -5,20 +5,20 @@
         @csrf
         @method('PATCH')
 
-        <div class="flex flex-col space-y-2 w-96 mb-4">
+        <div class="flex flex-col space-y-2 w-96 mb-8 relative">
             <label for="title[en]">{{ __('messages.Title[en]') }}</label>
             <input class="border rounded-md h-10 text-black" value="{{ $movie->getTranslation('title', 'en') }}"
                 type="text" id="title[en]" name="title[en]">
             @error('title.en')
-                <p class="absolute  text-red-600">{{ $message }}</p>
+                <p class="absolute top-full  text-red-600">{{ $message }}</p>
             @enderror
         </div>
-        <div class="flex flex-col space-y-2 w-96 mb-4">
+        <div class="flex flex-col space-y-2 w-96 mb-8 relative">
             <label for="title[ka]">{{ __('messages.Title[ka]') }}</label>
             <input class="border rounded-md h-10 text-black" value="{{ $movie->getTranslation('title', 'ka') }}"
                 type="text" id="title[ka]" name="title[ka]">
             @error('title.ka')
-                <p class="absolute  text-red-600">{{ $message }}</p>
+                <p class="absolute top-full  text-red-600">{{ $message }}</p>
             @enderror
         </div>
         <x-submit-button>{{ __('messages.Update') }}</x-submit-button>

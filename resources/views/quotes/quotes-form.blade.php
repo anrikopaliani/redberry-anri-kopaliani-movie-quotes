@@ -13,28 +13,28 @@
                 @endforeach
             </select>
         </div>
-        <div class="flex flex-col space-y-2 w-96 mb-4">
+        <div class="flex flex-col space-y-2 w-96 mb-8 relative">
             <label for="quote[en]">{{ __('messages.Quote[en]') }}</label>
             <input class="border rounded-md h-10 text-black" type="text" value="{{ old('quote.en') }}" id="quote[en]"
                 name="quote[en]">
             @error('quote.en')
-                <p class="absolute  text-red-600">{{ $message }}</p>
+                <p class="absolute top-full  text-red-600">{{ $message }}</p>
             @enderror
         </div>
-        <div class="flex flex-col space-y-2 w-96 mb-4">
+        <div class="flex flex-col space-y-2 w-96 mb-8 relative">
             <label for="quote[ka]">{{ __('messages.Quote[ka]') }}</label>
             <input type="text" class="border rounded-md h-10 text-black" value="{{ old('quote.ka') }}" id="quote[ka]"
                 name="quote[ka]">
             @error('quote.ka')
-                <p class="absolute  text-red-600">{{ $message }}</p>
+                <p class="absolute top-full text-red-600">{{ $message }}</p>
             @enderror
         </div>
 
-        <div class="flex flex-col space-y-2 mb-4 w-96">
+        <div class="flex flex-col space-y-2 mb-8 w-96 relative">
             <label for="image">{{ __('messages.image') }}</label>
             <input type="file" accept="image/*" name="image" id="image">
             @error('image')
-                <p class="absolute  text-red-600">{{ $message }}</p>
+                <p class="absolute top-full  text-red-600">{{ $message }}</p>
             @enderror
         </div>
         <x-submit-button>{{ __('messages.Submit') }}</x-submit-button>
