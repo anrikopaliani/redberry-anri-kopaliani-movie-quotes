@@ -21,6 +21,6 @@
                 <p class="absolute  text-red-600">{{ $message }}</p>
             @enderror
         </div>
-        <x-submit-button>{{ __('Submit') }}</x-submit-button>
+        <x-submit-button>{{ __('messages.Update') }}</x-submit-button>
     </form>
 </x-layout>
