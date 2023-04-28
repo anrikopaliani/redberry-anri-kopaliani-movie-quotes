@@ -4,7 +4,7 @@
     <div class="flex flex-col h-96 mt-20 mx-auto" style="width: 700px">
         @foreach ($quotes as $item)
             <section class="flex flex-col  mt-5 pb-20 w-full">
-                <img class="object-cover" width="700" src="{{ URL::to('/') . '/storage/' . 'images/' . $item->image }}">
+                <img class="object-cover" width="700" src="{{ URL::to('/') . '/storage/' . $item->image }}">
                 <div class="bg-white w-full text-black break-words">
                     <p>"{{ $item->getTranslation('quote', app()->getLocale()) }}"</p>
                 </div>
