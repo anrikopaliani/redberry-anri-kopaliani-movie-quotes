@@ -3,7 +3,7 @@
     <form action="{{ route('movie.post') }}" method="POST" class="mx-auto mb-28">
         @csrf
         <div class="flex flex-col space-y-2 w-96 mb-4">
-            <label for="title[en]">{{ ucwords(__('title[en]')) }}</label>
+            <label for="title[en]">{{ __('messages.Title[en]') }}</label>
             <input class="border rounded-md h-10 text-black" value="{{ old('title.en') }}" type="text" id="title[en]"
                 name="title[en]">
             @error('title.en')
@@ -11,13 +11,13 @@
             @enderror
         </div>
         <div class="flex flex-col space-y-2 w-96 mb-4">
-            <label for="title[ka]">{{ ucwords(__('title[ka]')) }}</label>
+            <label for="title[ka]">{{ __('messages.Title[ka]') }}</label>
             <input class="border rounded-md h-10 text-black" value="{{ old('title.ka') }}" type="text" id="title[ka]"
                 name="title[ka]">
             @error('title.ka')
                 <p class=" text-red-600">{{ $message }}</p>
             @enderror
         </div>
-        <x-submit-button>{{ __('Submit') }}</x-submit-button>
+        <x-submit-button>{{ __('messages.Submit') }}</x-submit-button>
     </form>
 </x-layout>
