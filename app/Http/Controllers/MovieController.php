@@ -12,12 +12,46 @@ class MovieController extends Controller
 {
 	public function store(StoreMovieRequest $request): RedirectResponse
 	{
+		$movies = Movie::all();
+
 		$validated = $request->validated();
 		$validated['user_id'] = auth()->user()->id;
 
-		Movie::create($validated);
+		$errorMessagesKA = app()->getLocale() === 'en' ? 'Title[ka] already exists' : 'სათაური[ქართ] უკვე არსებობს';
+		$errorMessagesEN = app()->getLocale() === 'en' ? 'Title[en] already exists' : 'სათაური[ინგ] უკვე არსებობს';
 
-		return redirect('/');
+		foreach ($movies as $movie)
+		{
+			$en = $movie->getTranslation('title', 'en');
+			$ka = $movie->getTranslation('title', 'ka');
+
+			$requestKA = $validated['title']['ka'];
+			$requestEN = $validated['title']['en'];
+
+			if ($en === $requestEN && $ka == $requestKA)
+			{
+				return back()->withErrors([
+					'title.ka' => $errorMessagesKA,
+					'title.en' => $errorMessagesEN,
+				]);
+			}
+			elseif ($en === $requestEN && $ka !== $requestKA)
+			{
+				return back()->withErrors([
+					'title.en' => $errorMessagesEN,
+				]);
+			}
+			elseif ($en !== $requestEN && $ka === $requestKA)
+			{
+				return back()->withErrors([
+					'title.ka' => $errorMessagesKA,
+				]);
+			}
+
+			Movie::create($validated);
+
+			return redirect('/');
+		}
 	}
 
 	public function show(Movie $movie): View
