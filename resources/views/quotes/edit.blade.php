@@ -22,6 +22,6 @@
                 value="{{ old('image', $quote->image) }}">
             <img src="{{ URL::to('/') . '/storage/' . $quote->image }}" width="100" height="100" alt="">
         </div>
-        <x-submit-button>{{ __('messages.Submit') }}</x-submit-button>
+        <x-submit-button>{{ __('messages.Update') }}</x-submit-button>
     </form>
 </x-layout>
