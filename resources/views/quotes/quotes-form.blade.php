@@ -5,7 +5,7 @@
         @csrf
         <div class="flex flex-col space-y-2 mb-4">
             <label for="movie_id">{{ __('messages.Select a Movie') }}</label>
-            <select class="text-black h-10 rounded-md pl-2 bg-white" name="movie_id" id="movie_id">
+            <select class=" text-black h-10 w-96  rounded-md pl-2 bg-white" name="movie_id" id="movie_id">
                 @foreach ($movies as $movie)
                     <option value="{{ $movie->id }}">
                         {{ $movie->title }}
