@@ -12,7 +12,7 @@ return new class extends Migration {
 	{
 		Schema::create('movies', function (Blueprint $table) {
 			$table->id();
-			$table->json('title');
+			$table->json('title')->unique();
 			$table->foreignId('user_id')->references('id')->on('users');
 			$table->timestamps();
 		});
