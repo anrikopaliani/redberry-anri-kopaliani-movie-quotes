@@ -18,6 +18,8 @@ return [
 	'Title[ka]'          => 'Title[ka]',
 	'Title[en]'          => 'Title[en]',
 	'Incorrect password' => 'Incorrect password',
-	'Update'         => 'Update',
-	'Delete'         => 'Delete',
+	'Update'             => 'Update',
+	'Delete'             => 'Delete',
+	'edit'               => 'edit',
+	'add'                => 'add',
 ];
