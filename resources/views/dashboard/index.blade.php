@@ -7,11 +7,13 @@
                     <tr class="bg-gray-100">
                         <th class="text-left p-4 font-medium">
                             Movies
-                            <a href="{{ route('movie.get') }}" class="bg-black text-white p-1 border">add</a>
+                            <a href="{{ route('movie.get') }}"
+                                class="bg-black text-white p-1 border">{{ __('messages.add') }}</a>
                         </th>
                         <th class="text-left p-4 font-medium">
                             Quotes
-                            <a href="{{ route('add-quote.get') }}" class="bg-black text-white p-1 border">add</a>
+                            <a href="{{ route('add-quote.get') }}"
+                                class="bg-black text-white p-1 border">{{ __('messages.add') }}</a>
                         </th>
                     </tr>
                 </thead>
@@ -25,12 +27,12 @@
                                     </p>
                                     <div class="flex space-x-1">
                                         <a href="{{ route('movie.edit', ['movie' => $movie->id]) }}"
-                                            class="bg-black text-white p-1">edit</a>
+                                            class="bg-black text-white p-1">{{ __('messages.edit') }}</a>
                                         <form method="POST"
                                             action="{{ route('movie.delete', ['movie' => $movie->id]) }}">
                                             @csrf
                                             @method('DELETE')
-                                            <button class="bg-black text-white p-1">Delete</button>
+                                            <button class="bg-black text-white p-1">{{ __('messages.Delete') }}</button>
                                         </form>
                                     </div>
                                 </div>
@@ -44,12 +46,13 @@
                                             </p>
                                             <div class="flex space-x-1">
                                                 <a href="{{ route('quote.edit', ['quote' => $quote->id]) }}"
-                                                    class="bg-black text-white p-1">edit</a>
+                                                    class="bg-black text-white p-1">{{ __('messages.edit') }}</a>
                                                 <form action="{{ route('quote.delete', ['quote' => $quote->id]) }}"
                                                     method="POST">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button class="bg-black text-white p-1">Delete</button>
+                                                    <button
+                                                        class="bg-black text-white p-1">{{ __('messages.Delete') }}</button>
                                                 </form>
                                             </div>
 
