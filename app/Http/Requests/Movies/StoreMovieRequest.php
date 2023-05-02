@@ -14,8 +14,8 @@ class StoreMovieRequest extends FormRequest
 	public function rules(): array
 	{
 		return [
-			'title.en' => 'required',
-			'title.ka' => 'required',
+			'title.en' => 'required|regex:/[a-zA-Z0-9]/',
+			'title.ka' => 'required|regex:/[ა-ჰ0-9]/',
 		];
 	}
 }

@@ -4,6 +4,7 @@ return [
 	'required'          => ':attribute არ არის მითითებული!',
 	'image'             => 'ფაილი უნდა იყოს სურათი!',
 	'exists'            => ':attribute არ არსებობს',
+	'regex'             => ':attribute არასწორ ფორმატშია.',
 	'attributes'        => [
 		'username'  => 'მომხმარებლის სახელი',
 		'password'  => 'პაროლი',
